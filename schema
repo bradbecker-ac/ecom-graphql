@@ -1,0 +1,4461 @@
+{
+    "data": {
+        "__schema": {
+            "queryType": {
+                "name": "Query"
+            },
+            "mutationType": {
+                "name": "Mutation"
+            },
+            "types": [
+                {
+                    "kind": "ENUM",
+                    "name": "ActiveCampaignOrderState",
+                    "enumValues": [
+                        {
+                            "name": "PENDING",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "COMPLETED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ABANDONED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "RECOVERED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "WAITING",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "CANCELED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "CANCELLED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "REFUNDED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "FAILED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "RETURNED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "PENDING_PAYMENT",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ActiveCampaignOrderStateFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "ActiveCampaignOrderState"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Address",
+                    "fields": [
+                        {
+                            "name": "firstName",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "lastName",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "address1",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "address2",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "city",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "province",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "country",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "postal",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "phone",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "company",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "email",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AddressFilter",
+                    "inputFields": [
+                        {
+                            "name": "firstName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "lastName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "address1",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "address2",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "address3",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "city",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "province",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "country",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "postal",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "phone",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "company",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "email",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AddressInput",
+                    "inputFields": [
+                        {
+                            "name": "firstName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "lastName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "address1",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "address2",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "address3",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "city",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "province",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "country",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "postal",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "phone",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "company",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "email",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "SCALAR",
+                    "name": "BigDecimal"
+                },
+                {
+                    "kind": "SCALAR",
+                    "name": "Boolean"
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "BooleanFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "BulkAsync",
+                    "fields": [
+                        {
+                            "name": "recordId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Connection",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "integrationName",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "connectionUniqueIdentifier",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "connectionName",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "logoUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "linkUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ConnectionFilter",
+                    "inputFields": [
+                        {
+                            "name": "integrationName",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "connectionUniqueIdentifier",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "connectionName",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "IntFieldFilter"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ConnectionInput",
+                    "inputFields": [
+                        {
+                            "name": "id",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "integrationName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "connectionUniqueIdentifier",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "connectionName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "logoUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "linkUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "CreationSource",
+                    "enumValues": [
+                        {
+                            "name": "HISTORICAL",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "REAL_TIME",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreationSourceFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "CreationSource"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CustomerData",
+                    "inputFields": [
+                        {
+                            "name": "firstName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "lastName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "phone",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "company",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "smsMarketingState",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SmsMarketingState"
+                            }
+                        },
+                        {
+                            "name": "smsOptInLevel",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "MarketingOptInLevel"
+                            }
+                        },
+                        {
+                            "name": "smsConsentUpdatedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "DimensionsUnit",
+                    "enumValues": [
+                        {
+                            "name": "IMPERIAL",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "METRIC",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Discount",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "type",
+                            "args": [],
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "OrderDiscountType"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "discountAmount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "DiscountInput",
+                    "inputFields": [
+                        {
+                            "name": "name",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "type",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "OrderDiscountType"
+                            }
+                        },
+                        {
+                            "name": "discountAmount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "FilterOperator",
+                    "enumValues": [
+                        {
+                            "name": "EQ",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "LT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "LTE",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "GT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "GTE",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "CONTAINS",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "IN",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "ImageData",
+                    "fields": [
+                        {
+                            "name": "url",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "height",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "width",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ImageDataInput",
+                    "inputFields": [
+                        {
+                            "name": "url",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "height",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "width",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "SCALAR",
+                    "name": "Int"
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "IntFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "SCALAR",
+                    "name": "JSON"
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "LineItem",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeLineItemId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeOrderId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "productStorePrimaryId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeBaseProductId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "productUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "normalizedOrderStatus",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "category",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "quantity",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "sku",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "imageUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "priceAmount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "lineItemType",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "fulfillmentStatus",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isOnSale",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "averageRating",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "brand",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "tags",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "LineItemInput",
+                    "inputFields": [
+                        {
+                            "name": "id",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeLineItemId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeOrderId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "productStorePrimaryId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeBaseProductId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "productUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "normalizedOrderStatus",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "category",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "name",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "quantity",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "sku",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "imageUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "priceAmount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "lineItemType",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "fulfillmentStatus",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "isOnSale",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "averageRating",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "brand",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "tags",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "MarketingOptInLevel",
+                    "enumValues": [
+                        {
+                            "name": "CONFIRMED_OPT_IN",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "SINGLE_OPT_IN",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "UNKNOWN",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Mutation",
+                    "fields": [
+                        {
+                            "name": "createConnection",
+                            "args": [
+                                {
+                                    "name": "connection",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "ConnectionInput"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Connection"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "updateConnection",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                },
+                                {
+                                    "name": "connection",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "ConnectionInput"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Connection"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "disconnectConnection",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Connection"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "reconnectConnection",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Connection"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "syncLegacyConnection",
+                            "args": [
+                                {
+                                    "name": "integrationName",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                },
+                                {
+                                    "name": "connectionUniqueIdentifier",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Connection"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "createProduct",
+                            "args": [
+                                {
+                                    "name": "product",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "ProductInput"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Product"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "updateProduct",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                },
+                                {
+                                    "name": "product",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "ProductInput"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Product"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "deleteProduct",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "bulkUpsertProducts",
+                            "args": [
+                                {
+                                    "name": "products",
+                                    "type": {
+                                        "kind": "LIST",
+                                        "ofType": {
+                                            "kind": "INPUT_OBJECT",
+                                            "name": "ProductInput"
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Product"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "upsertOrder",
+                            "args": [
+                                {
+                                    "name": "order",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "OrderInput"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Order"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "bulkUpsertOrders",
+                            "args": [
+                                {
+                                    "name": "orders",
+                                    "type": {
+                                        "kind": "LIST",
+                                        "ofType": {
+                                            "kind": "INPUT_OBJECT",
+                                            "name": "OrderInput"
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Order"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "bulkUpsertOrdersAsync",
+                            "args": [
+                                {
+                                    "name": "orders",
+                                    "type": {
+                                        "kind": "LIST",
+                                        "ofType": {
+                                            "kind": "INPUT_OBJECT",
+                                            "name": "OrderInput"
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "BulkAsync"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "NumberFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Order",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "connectionId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeOrderId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "lineItems",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "LineItem"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "orderNumber",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "cartId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeExternalOrderId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "creationSource",
+                            "args": [],
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "CreationSource"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "email",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeCustomerId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "shippingAddress",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Address"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "billingAddress",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Address"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeCreatedDate",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeModifiedDate",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeStatus",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "normalizedStatus",
+                            "args": [],
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "ActiveCampaignOrderState"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "notes",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "discounts",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Discount"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "locationId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "shippingMethod",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "orderUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isTestOrder",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "acceptsMarketing",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "customerLocale",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "salesChannel",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "currency",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "finalAmount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "discountsAmount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "shippingAmount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "paymentMethod",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "OrderDiscountType",
+                    "enumValues": [
+                        {
+                            "name": "ORDER",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "SHIPPING",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OrderFilter",
+                    "inputFields": [
+                        {
+                            "name": "connectionId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "IntFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "storeOrderId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "orderNumber",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "cartId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "storeExternalOrderId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "creationSource",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "CreationSourceFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "email",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "storeCustomerId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "shippingAddress",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "AddressFilter"
+                            }
+                        },
+                        {
+                            "name": "billingAddress",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "AddressFilter"
+                            }
+                        },
+                        {
+                            "name": "storeCreatedDate",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "storeModifiedDate",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "storeStatus",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "normalizedStatus",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "ActiveCampaignOrderStateFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "notes",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "discountName",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "locationId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "shippingMethod",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "orderUrl",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isTestOrder",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "acceptsMarketing",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "customerLocale",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "salesChannel",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "currency",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "finalAmount",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "discountsAmount",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "shippingAmount",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "paymentMethod",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OrderInput",
+                    "inputFields": [
+                        {
+                            "name": "connectionId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "storeOrderId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "lineItems",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "INPUT_OBJECT",
+                                    "name": "LineItemInput"
+                                }
+                            }
+                        },
+                        {
+                            "name": "orderNumber",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "cartId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeExternalOrderId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "creationSource",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "CreationSource"
+                            }
+                        },
+                        {
+                            "name": "email",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeCustomerId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "shippingAddress",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "AddressInput"
+                            }
+                        },
+                        {
+                            "name": "billingAddress",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "AddressInput"
+                            }
+                        },
+                        {
+                            "name": "storeCreatedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeModifiedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "storeStatus",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "normalizedStatus",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "ActiveCampaignOrderState"
+                            }
+                        },
+                        {
+                            "name": "notes",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            }
+                        },
+                        {
+                            "name": "discounts",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "INPUT_OBJECT",
+                                    "name": "DiscountInput"
+                                }
+                            }
+                        },
+                        {
+                            "name": "locationId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "shippingMethod",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "orderUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "isTestOrder",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "acceptsMarketing",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "customerLocale",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "salesChannel",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "smsMarketingState",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SmsMarketingState"
+                            }
+                        },
+                        {
+                            "name": "smsOptInLevel",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "MarketingOptInLevel"
+                            }
+                        },
+                        {
+                            "name": "smsConsentUpdatedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "currency",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "finalAmount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "discountsAmount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "shippingAmount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "paymentMethod",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "customerData",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "CustomerData"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "Pagination",
+                    "inputFields": [
+                        {
+                            "name": "offset",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "limit",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "PhysicalDimensions",
+                    "fields": [
+                        {
+                            "name": "length",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "width",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "height",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PhysicalDimensionsInput",
+                    "inputFields": [
+                        {
+                            "name": "length",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "width",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "height",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Product",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "connectionId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storeBaseProductId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductName",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductDescription",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductStoreCreatedDate",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductStoreModifiedDate",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "tags",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "categories",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductImages",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "ImageData"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductUrlSlug",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductDimensions",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "PhysicalDimensions"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "baseProductWeight",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "dimensionsUnit",
+                            "args": [],
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "DimensionsUnit"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "storePrimaryId",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantSku",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantName",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantDescription",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantPriceCurrency",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantPriceAmount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantStoreCreatedDate",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantStoreModifiedDate",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantImages",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "ImageData"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantUrlSlug",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantDimensions",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "PhysicalDimensions"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "variantWeight",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "type",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "status",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "upc",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isDeleted",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "numberOfSales",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isVirtual",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isDownloadable",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isVisible",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isOnSale",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isBackordersAllowed",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "stockStatus",
+                            "args": [],
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "StockStatus"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "averageRatings",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ratingCount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "brand",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "searchKeywords",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "condition",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "viewCount",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "attributes",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "JSON"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ProductFilter",
+                    "inputFields": [
+                        {
+                            "name": "pagination",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "Pagination"
+                            }
+                        },
+                        {
+                            "name": "connectionId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "IntFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "storeBaseProductId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductName",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductDescription",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductStoreCreatedDate",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductStoreModifiedDate",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "tags",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "categories",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductUrl",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductUrlSlug",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "baseProductDimensions",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "PhysicalDimensionsInput"
+                            }
+                        },
+                        {
+                            "name": "baseProductWeight",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "dimensionsUnit",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "DimensionsUnit"
+                            }
+                        },
+                        {
+                            "name": "storePrimaryId",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantSku",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantName",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantDescription",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantPriceCurrency",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantPriceAmount",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantStoreCreatedDate",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantStoreModifiedDate",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantUrl",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantUrlSlug",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "variantDimensions",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "PhysicalDimensionsInput"
+                            }
+                        },
+                        {
+                            "name": "variantWeight",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "type",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "status",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "upc",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isDeleted",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "numberOfSales",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "IntFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isVirtual",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isDownloadable",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isVisible",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isOnSale",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "isBackordersAllowed",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "BooleanFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "stockStatus",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StockStatusFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "averageRatings",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "NumberFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "ratingCount",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "IntFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "brand",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "searchKeywords",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "condition",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "StringFieldFilter"
+                            }
+                        },
+                        {
+                            "name": "viewCount",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "IntFieldFilter"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ProductInput",
+                    "inputFields": [
+                        {
+                            "name": "connectionId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "legacyConnectionId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "storeBaseProductId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "baseProductName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "baseProductDescription",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "baseProductStoreCreatedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "baseProductStoreModifiedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "tags",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            }
+                        },
+                        {
+                            "name": "categories",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            }
+                        },
+                        {
+                            "name": "baseProductImages",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "INPUT_OBJECT",
+                                    "name": "ImageDataInput"
+                                }
+                            }
+                        },
+                        {
+                            "name": "baseProductUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "baseProductUrlSlug",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "baseProductDimensions",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "PhysicalDimensionsInput"
+                            }
+                        },
+                        {
+                            "name": "baseProductWeight",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "dimensionsUnit",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "DimensionsUnit"
+                            }
+                        },
+                        {
+                            "name": "storePrimaryId",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantSku",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantName",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantDescription",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantPriceCurrency",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantPriceAmount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "variantStoreCreatedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantStoreModifiedDate",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantImages",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "INPUT_OBJECT",
+                                    "name": "ImageDataInput"
+                                }
+                            }
+                        },
+                        {
+                            "name": "variantUrl",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantUrlSlug",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "variantDimensions",
+                            "type": {
+                                "kind": "INPUT_OBJECT",
+                                "name": "PhysicalDimensionsInput"
+                            }
+                        },
+                        {
+                            "name": "variantWeight",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "type",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "status",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "upc",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "inventoryQuantity",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "isDeleted",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "numberOfSales",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "isVirtual",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "isDownloadable",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "isVisible",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "isOnSale",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "isBackordersAllowed",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            }
+                        },
+                        {
+                            "name": "stockStatus",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "StockStatus"
+                            }
+                        },
+                        {
+                            "name": "averageRatings",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "BigDecimal"
+                            }
+                        },
+                        {
+                            "name": "ratingCount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "brand",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "searchKeywords",
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            }
+                        },
+                        {
+                            "name": "condition",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "viewCount",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Int"
+                            }
+                        },
+                        {
+                            "name": "attributes",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "JSON"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "Query",
+                    "fields": [
+                        {
+                            "name": "connectionById",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                },
+                                {
+                                    "name": "legacyConnectionId",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Int"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Connection"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "searchConnection",
+                            "args": [
+                                {
+                                    "name": "filter",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "ConnectionFilter"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Connection"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "productById",
+                            "args": [
+                                {
+                                    "name": "id",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Product"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "searchProduct",
+                            "args": [
+                                {
+                                    "name": "filter",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "ProductFilter"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Product"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "getOrder",
+                            "args": [
+                                {
+                                    "name": "connectionId",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                },
+                                {
+                                    "name": "legacyConnectionId",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Int"
+                                    }
+                                },
+                                {
+                                    "name": "storeOrderId",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "Order"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "searchOrder",
+                            "args": [
+                                {
+                                    "name": "filter",
+                                    "type": {
+                                        "kind": "INPUT_OBJECT",
+                                        "name": "OrderFilter"
+                                    }
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "Order"
+                                }
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "SmsMarketingState",
+                    "enumValues": [
+                        {
+                            "name": "NOT_SUBSCRIBED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "PENDING",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "REDACTED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "SUBSCRIBED",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "UNSUBSCRIBED",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "SortType",
+                    "enumValues": [
+                        {
+                            "name": "ASC",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "DESC",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "StockStatus",
+                    "enumValues": [
+                        {
+                            "name": "IN_STOCK",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "OUT_OF_STOCK",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "BACKORDER",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "StockStatusFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "StockStatus"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "SCALAR",
+                    "name": "String"
+                },
+                {
+                    "kind": "INPUT_OBJECT",
+                    "name": "StringFieldFilter",
+                    "inputFields": [
+                        {
+                            "name": "filterOperator",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "FilterOperator"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "name": "sort",
+                            "type": {
+                                "kind": "ENUM",
+                                "name": "SortType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "__Directive",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "description",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isRepeatable",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "locations",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "LIST",
+                                    "ofType": {
+                                        "kind": "NON_NULL",
+                                        "ofType": {
+                                            "kind": "ENUM",
+                                            "name": "__DirectiveLocation"
+                                        }
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "args",
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean"
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "LIST",
+                                    "ofType": {
+                                        "kind": "NON_NULL",
+                                        "ofType": {
+                                            "kind": "OBJECT",
+                                            "name": "__InputValue"
+                                        }
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "onOperation",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": true,
+                            "deprecationReason": "Use `locations`."
+                        },
+                        {
+                            "name": "onFragment",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": true,
+                            "deprecationReason": "Use `locations`."
+                        },
+                        {
+                            "name": "onField",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": true,
+                            "deprecationReason": "Use `locations`."
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "__DirectiveLocation",
+                    "enumValues": [
+                        {
+                            "name": "QUERY",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "MUTATION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "SUBSCRIPTION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "FIELD",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "FRAGMENT_DEFINITION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "FRAGMENT_SPREAD",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "INLINE_FRAGMENT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "VARIABLE_DEFINITION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "SCHEMA",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "SCALAR",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "OBJECT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "FIELD_DEFINITION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ARGUMENT_DEFINITION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "INTERFACE",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "UNION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ENUM",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ENUM_VALUE",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "INPUT_OBJECT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "INPUT_FIELD_DEFINITION",
+                            "isDeprecated": false
+                        }
+                    ]
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "__EnumValue",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "description",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isDeprecated",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "deprecationReason",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "__Field",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "description",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "args",
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean"
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "LIST",
+                                    "ofType": {
+                                        "kind": "NON_NULL",
+                                        "ofType": {
+                                            "kind": "OBJECT",
+                                            "name": "__InputValue"
+                                        }
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "type",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "__Type"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isDeprecated",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "deprecationReason",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "__InputValue",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "description",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "type",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "__Type"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "defaultValue",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "isDeprecated",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "Boolean"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "deprecationReason",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "__Schema",
+                    "fields": [
+                        {
+                            "name": "description",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "types",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "LIST",
+                                    "ofType": {
+                                        "kind": "NON_NULL",
+                                        "ofType": {
+                                            "kind": "OBJECT",
+                                            "name": "__Type"
+                                        }
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "queryType",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "OBJECT",
+                                    "name": "__Type"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "mutationType",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "__Type"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "directives",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "LIST",
+                                    "ofType": {
+                                        "kind": "NON_NULL",
+                                        "ofType": {
+                                            "kind": "OBJECT",
+                                            "name": "__Directive"
+                                        }
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "subscriptionType",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "__Type"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "OBJECT",
+                    "name": "__Type",
+                    "fields": [
+                        {
+                            "name": "kind",
+                            "args": [],
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "ENUM",
+                                    "name": "__TypeKind"
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "name",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "description",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "fields",
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean"
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "NON_NULL",
+                                    "ofType": {
+                                        "kind": "OBJECT",
+                                        "name": "__Field"
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "interfaces",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "NON_NULL",
+                                    "ofType": {
+                                        "kind": "OBJECT",
+                                        "name": "__Type"
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "possibleTypes",
+                            "args": [],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "NON_NULL",
+                                    "ofType": {
+                                        "kind": "OBJECT",
+                                        "name": "__Type"
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "enumValues",
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean"
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "NON_NULL",
+                                    "ofType": {
+                                        "kind": "OBJECT",
+                                        "name": "__EnumValue"
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "inputFields",
+                            "args": [
+                                {
+                                    "name": "includeDeprecated",
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "Boolean"
+                                    },
+                                    "defaultValue": "false"
+                                }
+                            ],
+                            "type": {
+                                "kind": "LIST",
+                                "ofType": {
+                                    "kind": "NON_NULL",
+                                    "ofType": {
+                                        "kind": "OBJECT",
+                                        "name": "__InputValue"
+                                    }
+                                }
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ofType",
+                            "args": [],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "__Type"
+                            },
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "specifiedByUrl",
+                            "args": [],
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "isDeprecated": false
+                        }
+                    ],
+                    "interfaces": []
+                },
+                {
+                    "kind": "ENUM",
+                    "name": "__TypeKind",
+                    "enumValues": [
+                        {
+                            "name": "SCALAR",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "OBJECT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "INTERFACE",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "UNION",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "ENUM",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "INPUT_OBJECT",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "LIST",
+                            "isDeprecated": false
+                        },
+                        {
+                            "name": "NON_NULL",
+                            "isDeprecated": false
+                        }
+                    ]
+                }
+            ],
+            "directives": [
+                {
+                    "name": "include",
+                    "locations": [
+                        "FIELD",
+                        "FRAGMENT_SPREAD",
+                        "INLINE_FRAGMENT"
+                    ],
+                    "args": [
+                        {
+                            "name": "if",
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "skip",
+                    "locations": [
+                        "FIELD",
+                        "FRAGMENT_SPREAD",
+                        "INLINE_FRAGMENT"
+                    ],
+                    "args": [
+                        {
+                            "name": "if",
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "Boolean"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "deprecated",
+                    "locations": [
+                        "FIELD_DEFINITION",
+                        "ARGUMENT_DEFINITION",
+                        "ENUM_VALUE",
+                        "INPUT_FIELD_DEFINITION"
+                    ],
+                    "args": [
+                        {
+                            "name": "reason",
+                            "type": {
+                                "kind": "SCALAR",
+                                "name": "String"
+                            },
+                            "defaultValue": "\"No longer supported\""
+                        }
+                    ]
+                },
+                {
+                    "name": "specifiedBy",
+                    "locations": [
+                        "SCALAR"
+                    ],
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": {
+                                "kind": "NON_NULL",
+                                "ofType": {
+                                    "kind": "SCALAR",
+                                    "name": "String"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
